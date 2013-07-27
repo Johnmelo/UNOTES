@@ -1,29 +1,120 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 body {
 	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
-}
-
-.pastas {
 	background: #eee;
-	margin: 20px 0
+	text-align: center;
+
 }
 
-.pastas h2 {
-	background: #ddd;
-	padding: 12px;
-	margin: 0;
+input {
+  padding: 0.6em;
 }
 
-.notas {
-	margin: 10px;
-	border: 1px solid #aaa;
-	padding: 0 15px;
+input[type="email"]{
+  font-size: 22px;
+  height: 52px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
-.menu li {
-	padding: 10px;
-	background: rgb(220,220,200);
+input[type="submit"] {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+  background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+  background-color:#77d42a;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #268a16;
+  display:inline-block;
+  color: #224406;
+  font-size:30px;
+  padding:6px 24px;
+  text-decoration:none;
+  cursor: pointer;
 }
-		
+
+input[type="submit"]:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+  background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+  background-color:#5cb811;
+}
+
+input[type="submit"]:active {
+  position:relative;
+}
+
+p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header-container {
+  margin: auto;
+  width: 600px !important;
+}
+
+.top-header {
+	background: rgb(2, 130, 210);
+	background-size: cover;
+	height: 260px;
+	color: #fff;
+}
+
+.top-header .grid{
+  margin: auto;
+}
+
+.top-header .big{
+	font-family: kavoon;
+  	font-size: 60px;
+  	font-weight: normal;
+}
+
+.top-header h1{
+  font-size: 32px;
+  text-shadow: 1px 1px 1px black;
+  font-weight: 100;
+}
+
+.top-header h2{
+  font-size: 22px;
+  color: #fff;
+}
+
+.top-header .call-to-action {
+	background: rgb(15,35,55);
+	border-radius: 10px;
+	padding: 0px 10px 15px 10px;
+	margin-bottom: 10px;
+	box-shadow: 2px 3px 10px #aaa;
+}
+
+.features {
+  background: url("bg_pattern.png") !important;
+}
+
+.features img{
+  border-radius: 200px;
+}
+
+.features h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 60px 0 0 0 !important;
+}
+
+.features .box {
+  min-height: 240px;
+  padding: 20px;
+  background: #fff;
+  border-top: 15px solid rgb(2, 130, 210);
+}
+
+.btn {
+	width: 50px;
+	padding: 10px 20px;
+	background-color: green;
+	color: #fff;
+}
+
