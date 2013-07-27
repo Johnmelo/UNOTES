@@ -1,4 +1,13 @@
 UNOTES::Application.routes.draw do
+  resources :comentarios
+
+
+  resources :nota
+
+
+  resources :pasta
+
+
   devise_for :users
 
   resources :users
