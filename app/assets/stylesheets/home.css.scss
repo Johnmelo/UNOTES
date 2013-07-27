@@ -1,3 +1,29 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+}
+
+.pastas {
+	background: #eee;
+	margin: 20px 0
+}
+
+.pastas h2 {
+	background: #ddd;
+	padding: 12px;
+	margin: 0;
+}
+
+.notas {
+	margin: 10px;
+	border: 1px solid #aaa;
+	padding: 0 15px;
+}
+
+.menu li {
+	padding: 10px;
+	background: rgb(220,220,200);
+}
+		
