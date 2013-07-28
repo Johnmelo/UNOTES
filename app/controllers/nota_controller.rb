@@ -1,6 +1,7 @@
 class NotaController < ApplicationController
   # GET /nota
   # GET /nota.json
+  before_filter :authenticate_user
   def index
     @nota = Notum.all
 

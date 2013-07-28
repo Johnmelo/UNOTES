@@ -1,4 +1,7 @@
 UNOTES::Application.routes.draw do
+  resources :roles
+
+
   resources :comentarios
 
 

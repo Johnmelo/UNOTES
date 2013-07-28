@@ -1,6 +1,7 @@
 class ComentariosController < ApplicationController
   # GET /comentarios
   # GET /comentarios.json
+  before_filter :authenticate_user
   def index
     @comentarios = Comentario.all
 

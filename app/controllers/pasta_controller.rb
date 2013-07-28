@@ -1,6 +1,7 @@
 class PastaController < ApplicationController
   # GET /pasta
   # GET /pasta.json
+  before_filter :authenticate_user
   def index
     @pasta = Pastum.all
 
