@@ -11,10 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728042428) do
+ActiveRecord::Schema.define(:version => 20130802033734) do
 
   create_table "comentarios", :force => true do |t|
     t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "grupo_users", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -25,17 +30,26 @@ ActiveRecord::Schema.define(:version => 20130728042428) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "grupouser", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "grupo_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "nota", :force => true do |t|
     t.string   "assunto"
     t.string   "conteudo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "pasta_ids"
   end
 
   create_table "pasta", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "grupo_ids"
   end
 
   create_table "roles", :force => true do |t|
