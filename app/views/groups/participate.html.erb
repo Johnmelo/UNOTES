@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @group.name %>
+</p>
+<p>
+	<% Group.find(:all).each do |c| %>
+		<%= check_box_tag  'user[user_ids][]',c.id,
+		@group.users.includ?(c) %>
+		<%= c.name %><br /></p>
+	<% end %>
+</p>
+
+<%= link_to 'Back', groups_path %>

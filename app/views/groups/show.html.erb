@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @group.name %>
+</p>
+<p>
+        <%= form_for(@group) do |f| %>
+            <div>
+        	   <% User.find(:all,:conditions => ["id LIKE :current",{:current => current_user.id}]) do |c|%>
+                <%= check_box_tag 'group[user_ids][]', c.id,
+                @group.users.include?(c) %>
+                <%#= "Participar" %>
+                <% end %>
+            </div>
+            <div >
+                    <%= f.submit %>
+            </div>
+        <% end %>
+ </p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

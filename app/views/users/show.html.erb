@@ -4,10 +4,13 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+	<b>Grupos:</b>
+	<% Group.find (:all) do |t| %>
+		<% if t.user_ids == current_user.id %>
+			<%= t.name %>
+		<% end %>	
+	<% end %>
 </p>
 
 
